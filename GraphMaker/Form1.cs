@@ -394,5 +394,32 @@ namespace GraphMaker
         {
             DrawEdges();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Random random = new Random((int)System.DateTime.Now.Ticks);
+
+            string nameGraph = "grafo" + random.Next();
+
+            System.IO.StreamWriter file = new System.IO.StreamWriter("CodigoDoGrafoPython.txt", false);
+
+            file.WriteLine(nameGraph + " = {}");
+
+            for (int i = 0; i < panel1.Controls.Count; i++)
+            {
+                file.WriteLine(string.Format("add_vertex({0}, \"{1}\")", nameGraph, panel1.Controls[i].Text));
+            }
+
+            for (int i = 0; i < listOfEdges.Count; i++)
+            {
+                file.WriteLine(string.Format("add_edge({0}, {{\"{1}\", \"{2}\"}})", nameGraph, listOfEdges[i].Item1.Text, listOfEdges[i].Item2.Text));
+            }
+
+            file.WriteLine();
+
+            file.Close();
+
+            System.Diagnostics.Process.Start("CodigoDoGrafoPython.txt");
+        }
     }
 }

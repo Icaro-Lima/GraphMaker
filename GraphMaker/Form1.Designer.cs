@@ -37,6 +37,7 @@
             this.textBoxEdges = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonColorPicker = new System.Windows.Forms.Button();
+            this.buttonGeneratePythonCode = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonCreate
@@ -112,11 +113,22 @@
             this.buttonColorPicker.UseVisualStyleBackColor = false;
             this.buttonColorPicker.Click += new System.EventHandler(this.buttonColorPicker_Click);
             // 
+            // buttonGeneratePythonCode
+            // 
+            this.buttonGeneratePythonCode.Location = new System.Drawing.Point(12, 122);
+            this.buttonGeneratePythonCode.Name = "buttonGeneratePythonCode";
+            this.buttonGeneratePythonCode.Size = new System.Drawing.Size(154, 23);
+            this.buttonGeneratePythonCode.TabIndex = 8;
+            this.buttonGeneratePythonCode.Text = "Gerar código python";
+            this.buttonGeneratePythonCode.UseVisualStyleBackColor = true;
+            this.buttonGeneratePythonCode.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 452);
+            this.Controls.Add(this.buttonGeneratePythonCode);
             this.Controls.Add(this.buttonColorPicker);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxEdges);
@@ -144,6 +156,7 @@
         private System.Windows.Forms.TextBox textBoxEdges;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonColorPicker;
+        private System.Windows.Forms.Button buttonGeneratePythonCode;
     }
 }
 
